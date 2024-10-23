@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/homeFragment">
+
+    <!-- Home Fragment -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.nutodo.HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <!-- Action to Subject1Fragment -->
+        <action
+            android:id="@+id/action_homeFragment_to_subject1Fragment"
+            app:destination="@id/subject1Fragment" />
+        <!-- Action to Subject2Fragment -->
+        <action
+            android:id="@+id/action_homeFragment_to_subject2Fragment"
+            app:destination="@id/subject2Fragment" />
+        <!-- Action to Subject3Fragment -->
+        <action
+            android:id="@+id/action_homeFragment_to_subject3Fragment"
+            app:destination="@id/subject3Fragment" />
+        <!-- Action to Subject4Fragment -->
+        <action
+            android:id="@+id/action_homeFragment_to_subject4Fragment"
+            app:destination="@id/subject4Fragment" />
+    </fragment>
+
+    <!-- Subject 1 Fragment -->
+    <fragment
+        android:id="@+id/subject1Fragment"
+        android:name="com.example.nutodo.courses.Subject1Fragment"
+        tools:layout="@layout/fragment_subject1" />
+
+    <!-- Subject 2 Fragment -->
+    <fragment
+        android:id="@+id/subject2Fragment"
+        android:name="com.example.nutodo.courses.Subject2Fragment"
+        tools:layout="@layout/fragment_subject2" />
+
+    <!-- Subject 3 Fragment -->
+    <fragment
+        android:id="@+id/subject3Fragment"
+        android:name="com.example.nutodo.courses.Subject3Fragment"
+        tools:layout="@layout/fragment_subject3" />
+
+    <!-- Subject 4 Fragment -->
+    <fragment
+        android:id="@+id/subject4Fragment"
+        android:name="com.example.nutodo.courses.Subject4Fragment"
+        tools:layout="@layout/fragment_subject4" />
+    <fragment
+        android:id="@+id/tasksFragment"
+        android:name="com.example.nutodo.TasksFragment"
+        tools:layout="@layout/fragment_tasks" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.nutodo.SettingsFragment"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.nutodo.ProfileFragment"
+        tools:layout="@layout/fragment_profile" />
+
+
+</navigation>
