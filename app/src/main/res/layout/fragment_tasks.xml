@@ -1,12 +1,89 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
+    tools:context=".TasksFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tasks Page"
-        android:textSize="24sp" />
-</LinearLayout>
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Buttons for Assigned, Missing, and Complete -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/buttonAssigned"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Assigned"
+                android:textColor="@android:color/white"
+                android:background="@color/blue"
+                android:padding="12dp" />
+
+            <Button
+                android:id="@+id/buttonMissing"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Missing"
+                android:textColor="@android:color/white"
+                android:background="@color/blue"
+                android:padding="12dp" />
+
+            <Button
+                android:id="@+id/buttonComplete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Complete"
+                android:textColor="@android:color/white"
+                android:background="@color/blue"
+                android:padding="12dp" />
+
+        </LinearLayout>
+
+        <!-- Content Views -->
+        <LinearLayout
+            android:id="@+id/contentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"> <!-- Initially hidden -->
+
+            <TextView
+                android:id="@+id/assignedContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Assigned Tasks Content"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/missingContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Missing Tasks Content"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/completeContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Complete Tasks Content"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

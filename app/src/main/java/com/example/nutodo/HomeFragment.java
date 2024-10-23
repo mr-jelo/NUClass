@@ -10,8 +10,6 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
-import com.example.nutodo.R;
-
 public class HomeFragment extends Fragment {
 
     @Nullable
@@ -37,14 +35,10 @@ public class HomeFragment extends Fragment {
         });
 
         CardView subjectCard4 = view.findViewById(R.id.subject4_card);
-        subjectCard3.setOnClickListener(v -> {
+        subjectCard4.setOnClickListener(v -> {
             Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_subject4Fragment);
         });
-
-
 
         return view;
     }
 }
-
-
