@@ -1,89 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".TasksFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
 
-        <!-- Buttons for Assigned, Missing, and Complete -->
-        <LinearLayout
-            android:layout_width="match_parent"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_assigned"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="@color/blue"
+            app:cardCornerRadius="10dp"
+            android:elevation="4dp">
 
-            <Button
-                android:id="@+id/buttonAssigned"
-                android:layout_width="0dp"
+            <TextView
+                android:id="@+id/tv_assigned"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_gravity="center"
                 android:text="Assigned"
                 android:textColor="@android:color/white"
-                android:background="@color/blue"
-                android:padding="12dp" />
+                android:textSize="18sp"
+                android:padding="16dp"/>
+        </androidx.cardview.widget.CardView>
 
-            <Button
-                android:id="@+id/buttonMissing"
-                android:layout_width="0dp"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_missing"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="@color/blue"
+            app:cardCornerRadius="10dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:id="@+id/tv_missing"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_gravity="center"
                 android:text="Missing"
                 android:textColor="@android:color/white"
-                android:background="@color/blue"
-                android:padding="12dp" />
+                android:textSize="18sp"
+                android:padding="16dp"/>
+        </androidx.cardview.widget.CardView>
 
-            <Button
-                android:id="@+id/buttonComplete"
-                android:layout_width="0dp"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_complete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="@color/blue"
+            app:cardCornerRadius="10dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:id="@+id/tv_complete"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_gravity="center"
                 android:text="Complete"
                 android:textColor="@android:color/white"
-                android:background="@color/blue"
-                android:padding="12dp" />
-
-        </LinearLayout>
-
-        <!-- Content Views -->
-        <LinearLayout
-            android:id="@+id/contentContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:visibility="gone"> <!-- Initially hidden -->
-
-            <TextView
-                android:id="@+id/assignedContent"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Assigned Tasks Content"
-                android:textSize="16sp"
-                android:visibility="gone" />
-
-            <TextView
-                android:id="@+id/missingContent"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Missing Tasks Content"
-                android:textSize="16sp"
-                android:visibility="gone" />
-
-            <TextView
-                android:id="@+id/completeContent"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Complete Tasks Content"
-                android:textSize="16sp"
-                android:visibility="gone" />
-
-        </LinearLayout>
-
+                android:textSize="18sp"
+                android:padding="16dp"/>
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <Spinner
+        android:id="@+id/spinner_subjects"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/spinner_background_stroke"
+        android:padding="15dp"/>
+
+    <LinearLayout
+        android:id="@+id/task_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"/>
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp" />
+</LinearLayout>

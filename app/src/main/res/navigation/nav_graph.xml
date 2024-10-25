@@ -25,6 +25,10 @@
         <action
             android:id="@+id/action_homeFragment_to_subject4Fragment"
             app:destination="@id/subject4Fragment" />
+        <!-- Action to TasksFragment -->
+        <action
+            android:id="@+id/action_homeFragment_to_tasksFragment"
+            app:destination="@id/tasksFragment" />
     </fragment>
 
     <!-- Subject 1 Fragment -->
@@ -50,11 +54,86 @@
         android:id="@+id/subject4Fragment"
         android:name="com.example.nutodo.courses.Subject4Fragment"
         tools:layout="@layout/fragment_subject4" />
+
+    <!-- Tasks Fragment -->
     <fragment
         android:id="@+id/tasksFragment"
         android:name="com.example.nutodo.TasksFragment"
-        tools:layout="@layout/fragment_tasks" />
+        tools:layout="@layout/fragment_tasks">
+        <!-- Actions to Task Detail Fragments -->
+        <action
+            android:id="@+id/action_tasksFragment_to_task1Deet"
+            app:destination="@id/task1Deet" />
+        <action
+            android:id="@+id/action_tasksFragment_to_task2Deet"
+            app:destination="@id/task2Deet" />
+        <action
+            android:id="@+id/action_tasksFragment_to_task3Deet"
+            app:destination="@id/task3Deet" />
+        <action
+            android:id="@+id/action_tasksFragment_to_task4Deet"
+            app:destination="@id/task4Deet" />
+        <action
+            android:id="@+id/action_tasksFragment_to_task5Deet"
+            app:destination="@id/task5Deet" />
+        <action
+            android:id="@+id/action_tasksFragment_to_defaultTaskDeet"
+            app:destination="@id/defaultTaskDeet" />
+    </fragment>
 
+    <!-- Task Detail Fragments -->
+    <fragment
+        android:id="@+id/task1Deet"
+        android:name="com.example.nutodo.tasks.Task1Deet"
+        tools:layout="@layout/fragment_task1_deet">
+        <!-- Action back to TasksFragment -->
+        <action
+            android:id="@+id/action_task1Deet_to_tasksFragment"
+            app:destination="@id/tasksFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/task2Deet"
+        android:name="com.example.nutodo.tasks.Task2Deet"
+        tools:layout="@layout/fragment_task2_deet">
+        <action
+            android:id="@+id/action_task2Deet_to_tasksFragment"
+            app:destination="@id/tasksFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/task3Deet"
+        android:name="com.example.nutodo.tasks.Task3Deet"
+        tools:layout="@layout/fragment_task3_deet">
+        <action
+            android:id="@+id/action_task3Deet_to_tasksFragment"
+            app:destination="@id/tasksFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/task4Deet"
+        android:name="com.example.nutodo.tasks.Task4Deet"
+        tools:layout="@layout/fragment_task4_deet">
+        <action
+            android:id="@+id/action_task4Deet_to_tasksFragment"
+            app:destination="@id/tasksFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/task5Deet"
+        android:name="com.example.nutodo.tasks.Task5Deet"
+        tools:layout="@layout/fragment_task5_deet" >
+        <action
+            android:id="@+id/action_task5Deet_to_tasksFragment"
+            app:destination="@id/tasksFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/defaultTaskDeet"
+        android:name="com.example.nutodo.tasks.DefaultTaskDeet"
+        tools:layout="@layout/fragment_default_task_deet" />
+
+    <!-- Other Fragments -->
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.nutodo.SettingsFragment"
@@ -64,6 +143,5 @@
         android:id="@+id/profileFragment"
         android:name="com.example.nutodo.ProfileFragment"
         tools:layout="@layout/fragment_profile" />
-
 
 </navigation>
